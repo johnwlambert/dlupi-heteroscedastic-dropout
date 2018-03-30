@@ -1,0 +1,4 @@
+[submodule "nmt_experiments"]
+	path = nmt_experiments
+	url = git@github.com:ozansener/OpenNMT-py.git
+
