@@ -11,6 +11,7 @@ This is the code for the paper:
 <br>
 Presented at [CVPR 2018](http://cvpr2018.thecvf.com/)
 
+The paper can be found on ArXiv [here](https://arxiv.org/abs/1805.11614).
 
 This repository also includes an implementation for repeatable random data augmentation transformations, useful for transforming images and bounding boxes contained therein identically.
 
