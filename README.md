@@ -27,11 +27,12 @@ This repository also includes an implementation for repeatable random data augme
 If you find this code useful for your research, please cite
 
 ```
-@inproceedings{LambertSener2018DLUPI,
-  title={Deep Learning Under Privileged Information Using Heteroscedastic Dropout},
-  author={Lambert, John and Sener, Ozan and Savarese, Silvio},
-  booktitle={Computer Vision and Pattern Recognition},
-  year={2018}
+@InProceedings{Lambert_2018_CVPR,
+author = {Lambert, John and Sener, Ozan and Savarese, Silvio},
+title = {Deep Learning Under Privileged Information Using Heteroscedastic Dropout},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
 }
 ```
 
