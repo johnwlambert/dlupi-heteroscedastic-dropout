@@ -102,14 +102,13 @@ First,[register and create an ImageNet account.](http://image-net.org/download-i
 
 Next, download the 1.28 Million images
 
-Now, we need to download the bounding box annotations, either [via the link here](http://image-net.org/Annotation/Annotation.tar.gz) (42.8 MB in size).
+Now, we need to download the XML bounding box annotations, either [via the link here](http://image-net.org/Annotation/Annotation.tar.gz) (42.8 MB in size).
 or via command line
 ```bash
 wget http://image-net.org/Annotation/Annotation.tar.gz
 ```
-They are stored in recursive tar.gz files, which can be recursively unzipped via tar, which will take around 10 minutes
+The XML annotations are stored in recursive tar.gz files. They can be recursively unzipped via tar, which will take around 10 minutes on a typical workstation:
 ```bash
-tar -xvzf
 mkdir bbox_annotation
 tar -xvzf Annotation.tar.gz -C bbox_annotation
 rm Annotation.tar.gz
@@ -118,12 +117,12 @@ for a in `ls -1 *.tar.gz`; do gzip -dc $a | tar xf -; done
 rm *.tar.gz
 ```
 
-Now, we have a directory called "bbox_annotation/Annotation" that contains .xml files with bounding box information for 3727 classes ("synsets") of ImageNet. We will use only the 1000 featured for the ImageNet Large-Scale Visual Recognitiion Challenge (ILSVRC) task.
+Now, we have a directory called `bbox_annotation/Annotation` that contains .xml files with bounding box information for 3,627 classes ("synsets") of ImageNet. We will use only the 1000 classes featured in the ImageNet Large-Scale Visual Recognitiion Challenge (ILSVRC) task.
 
 At this point, we'll arrange the image data into three folders: "train", "val", and "test".
 
-6.3G val.zip
-56G train.zip
+6.3G `val.zip`
+56G `train.zip`
 
 On the ILSVRC 2016 page on the ImageNet website, find and download the file named
 ```bash
@@ -131,9 +130,9 @@ ILSVRC2016_CLS-LOC.tar.gz
 ```
 This is the Classification-Localization dataset (155GB),unchanged since ILSVRC2012. There are a total of 1,281,167 images for training. The number of images for each synset (category) ranges from 732 to 1300. There are 50,000 validation images, with 50 images per synset. There are 100,000 test images. All images are in JPEG format.
 
-It is arranged as follows: {split}/{synset_name}/{file_name}.JPEG 
+It is arranged as follows: `{split}/{synset_name}/{file_name}.JPEG` 
 
-For example, ImageNet_2012/train/n02500267/02500267_2597.JPEG
+For example, `ImageNet_2012/train/n02500267/02500267_2597.JPEG`
 
 We will use the bounding box subset of the images from CLS-LOC (that have bounding box information). We'll then use subsets of the images with annotated bounding boxes to evaluate sample efficiency. Run:
 ```bash
