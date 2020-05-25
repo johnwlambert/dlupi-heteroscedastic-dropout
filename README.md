@@ -1,3 +1,6 @@
+## News
+- Thanks to Oxford and Imperial College London researchers, who showed how our PI-Dropout can be used for large gains over the state-of-the-art in reinforcement learning in their [recent paper](https://arxiv.org/abs/2005.09220) at the *Beyond tabula rasa in RL* workshop at ICLR 2020.
+
 # dlupi-heteroscedastic-dropout
 Deep Learning under Privileged Information Using Heteroscedastic Dropout (CVPR 2018, Official Repo)
 
