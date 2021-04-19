@@ -254,7 +254,7 @@ Free for personal or research use; for commercial use please contact me.
 </div>
 
 
-### Pretrained CNN Models
+## Pretrained CNN Models
 
 <div align='center'>
   <img src='images/fig_cnn.png' height="225px">
