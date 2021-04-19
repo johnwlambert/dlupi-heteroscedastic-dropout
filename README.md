@@ -80,21 +80,6 @@ When using CUDA, you can use cuDNN to accelerate convolutions.
 First [download cuDNN](https://developer.nvidia.com/cudnn) and copy the libraries to `/usr/local/cuda/lib64/`. 
 
 
-### Pretrained CNN Models
-
-<div align='center'>
-  <img src='images/fig_cnn.png' height="225px">
-</div>
-
-Download all pretrained CNN models from Google Drive by running the script
-
-```bash
-bash models/download_CNN_models.sh
-```
-
-<!-- This will download ten model files (~200MB) to the folder `models/`.
- -->
-
 ## Download ImageNet CLS-LOC
 
 <div align='center'>
@@ -267,6 +252,14 @@ Free for personal or research use; for commercial use please contact me.
 <div align='center'>
   <img src='images/fig_lstm.png' height="225px">
 </div>
+
+
+### Pretrained CNN Models
+
+<div align='center'>
+  <img src='images/fig_cnn.png' height="225px">
+</div>
+
 
 File explaining some of the model names: https://docs.google.com/document/d/1KBjYK52Jvcd8cYpIZPPRUrXGSu6jFsBL5O3FwvtBr_Q/edit?usp=sharing
 
