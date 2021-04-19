@@ -183,11 +183,7 @@ Here are some example outputs from these models, with an image size of 1024:
   <img src='images/styles/la_muse.jpg' height='173px'>
 </div> -->
 
-## Pretrained RNN Models
 
-<div align='center'>
-  <img src='images/fig_lstm.png' height="225px">
-</div>
 
 ## Training CNN Models From Scratch
 
@@ -264,4 +260,56 @@ The full set of options for this script is [described here](doc/flags.md#slow_ne
 ## License
 
 Free for personal or research use; for commercial use please contact me.
+
+
+## Pretrained RNN Models
+
+<div align='center'>
+  <img src='images/fig_lstm.png' height="225px">
+</div>
+
+File explaining some of the model names: https://docs.google.com/document/d/1KBjYK52Jvcd8cYpIZPPRUrXGSu6jFsBL5O3FwvtBr_Q/edit?usp=sharing
+
+- X* 75K, ADAPTIVE DECAY, [Model link](https://drive.google.com/drive/folders/1kRZbtWDk3a9hkoriqVuuA_tU5TsIFNPP?usp=sharing)
+```
+ { 'model_type' : ModelType.DROPOUT_FN_OF_XSTAR,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_imagenet_models/ImageNet_Localization_1000_Class_75perclass_identity_ATtest_lambda100_BS64'
+ },
+```
+
+- Modal. Hallucination shared params RGB MASK, [Model link](https://drive.google.com/drive/folders/1p6BXke0a4R0Qh7U_965hIOOPvu2nfCtC?usp=sharing)
+```
+ { 'model_type' : ModelType.MODALITY_HALLUC_SHARED_PARAMS,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_25_05_46_34_num_ex_per_cls_75_bs_128_optimizer_type_sgd_model_type_ModelType.MODALITY_HALLUC_SHARED_PARAMS_lr_0.01_fixlrsched_False'},
+```
+
+- MIML-FCN/VGG RGB MASK [Model link](https://drive.google.com/drive/folders/1FjQ_d0LnFnHZf0tEhiqS7_z9_WO-MM1k?usp=sharing)
+```
+ { 'model_type' : ModelType.MIML_FCN_VGG,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_25_05_31_49_num_ex_per_cls_75_bs_128_optimizer_type_sgd_model_type_ModelType.MIML_FCN_VGG_lr_0.01_fixlrsched_False'},
+```
+
+- MIML-FCN [40]/ResNet RGB MASK [Model link](https://drive.google.com/drive/folders/1DySZFsGbqZnJZQw8J9nROEFHlIWanlL5?usp=sharing)
+```
+ { 'model_type' : ModelType.MIML_FCN_RESNET,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_25_02_59_54_num_ex_per_cls_75_bs_256_optimizer_type_sgd_model_type_ModelType.MIML_FCN_RESNET_lr_0.1_fixlrsched_False'},
+```
+
+- GoCNN, VGG, scale coeff down by 320 [Model link](https://drive.google.com/drive/folders/1CrtJxZDCeq_4QXaKpYz9l3kdC3FW2JE8?usp=sharing)
+```
+ { 'model_type' : ModelType.GO_CNN_VGG,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_24_04_20_02_num_ex_per_cls_75_bs_256_optimizer_type_adam_model_type_ModelType.GO_CNN_VGG_lr_0.001_fixlrsched_False'},
+```
+
+- Random Gaussian Dropout [Model link](https://drive.google.com/drive/folders/1-lzF9IR_lDRPhMxGsaSaP2VsLaWCzuWS?usp=sharing)
+```
+ { 'model_type' : ModelType.DROPOUT_RANDOM_GAUSSIAN_NOISE,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_22_07_28_56_num_ex_per_cls_75_bs_256_optimizer_type_sgd_model_type_ModelType.DROPOUT_RANDOM_GAUSSIAN_NOISE_lr_0.01_fixlrsched_False'},
+```
+
+- NO X*	75k	adaptive decay, bs = 256	, [Model link](https://drive.google.com/drive/folders/1GLopFs-smoZe8zpHQR27W2bQb35c14CD?usp=sharing)
+```
+ { 'model_type' : ModelType.DROPOUT_BERNOULLI,
+   'model_fpath': '/vision/group/ImageNetLocalization/saved_SGDM_imagenet_models/2018_03_07_13_20_12_num_ex_per_cls_75_bs_256_optimizer_type_sgd_dropout_type_bernoulli_lr_0.01_fixlrsched_False'},
+```
 
